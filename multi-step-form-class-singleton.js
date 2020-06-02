@@ -233,7 +233,7 @@ const msfController = {
     };
 
     const validateLength = (el) => {
-      const re = .{8,};
+      const re = /.{8,}/;
       return re.test(String(el).toLowerCase());
     };
 
