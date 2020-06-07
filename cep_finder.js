@@ -37,6 +37,8 @@ $(document).ready(function() {
                         $("#bairro_district").val(dados.bairro);
                         $("#city").val(dados.localidade);
                         $("#state").val(dados.uf);
+                        //Vai para o campo de número, que não é preenchido automaticamente
+                        $("#address_number").focus();
                     } //end if.
                     else {
                         //CEP pesquisado não foi encontrado.
