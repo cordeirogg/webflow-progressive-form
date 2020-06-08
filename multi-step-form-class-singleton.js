@@ -12,7 +12,7 @@ class MSF {
         this.nextText = data.nextButtonText;
         this.submitText = data.submitButtonText;
         this.warningClass = data.warningClass;
-        this.show_more_elements = document.getElementsByClassName("show_more");
+        this.show_more_elements = document.querySelectorAll(".show_more");
         //this.alertText = data.alertText;
         if (data.alertElementID) {
             this.alertElement = document.getElementById(data.alertElementID);
