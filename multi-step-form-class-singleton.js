@@ -132,6 +132,7 @@ const msfController = {
 
         const refreshHeight = () => {
             msf.setMaskHeight();
+            console.log("refresh function activated");
         };
 
         const nextClick = () => {
