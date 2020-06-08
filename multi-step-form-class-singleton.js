@@ -114,6 +114,7 @@ class MSF {
     }
 }
 
+
 const msfController = {
     init: (msf) => {
         const start = () => {
@@ -132,7 +133,7 @@ const msfController = {
         const refreshHeight = () => {
             msf.setMaskHeight();
         };
-        
+
         const nextClick = () => {
             const filledFields = checkRequiredInputs(msf.currentStep);
             if (filledFields) {
