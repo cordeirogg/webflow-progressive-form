@@ -142,7 +142,7 @@ const msfController = {
                     msf.hideAlert();
                 } else {
                     msf.goNext();
-                    
+                    msf.setMaskHeight();
                     msf.setNextButtonText();
                     msf.hideAlert();
                 }
