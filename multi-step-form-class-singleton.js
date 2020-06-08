@@ -12,6 +12,7 @@ class MSF {
         this.nextText = data.nextButtonText;
         this.submitText = data.submitButtonText;
         this.warningClass = data.warningClass;
+        this.show_more_elements = document.getElementsByClassName("show_more");
         //this.alertText = data.alertText;
         if (data.alertElementID) {
             this.alertElement = document.getElementById(data.alertElementID);
@@ -123,8 +124,15 @@ const msfController = {
         const setEventListeners = () => {
             msf.next.addEventListener("click", nextClick);
             msf.back.addEventListener("click", backClick);
+            this.show_more_elements.forEach(function(elem) {
+                elem.addEventListener("click", refreshHeight);
+            });
         };
 
+        const refreshHeight = () => {
+            msf.setMaskHeight();
+        };
+        
         const nextClick = () => {
             const filledFields = checkRequiredInputs(msf.currentStep);
             if (filledFields) {
